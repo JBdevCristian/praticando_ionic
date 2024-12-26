@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -18,8 +19,16 @@ export class HomePage {
       }
     }
 
-    public acao(): void {
-      this.titulo = 'Botão clicado carai'
+    constructor(private navegacao: NavController) { }
+
+   
+    abrirBotao() {
+      this.navegacao.navigateForward('botoes')
     }
+
+    abrirLista() {
+      this.navegacao.navigateForward('lista')
+    }
+    
 
 }

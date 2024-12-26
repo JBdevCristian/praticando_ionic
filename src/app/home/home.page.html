@@ -84,7 +84,7 @@
         <ion-col size="3" offset="2">teste</ion-col>
       </ion-row>
     </ion-grid>
-    -->
+  
 
     <h2>Data Biding</h2>
     <h1>{{titulo}}</h1>
@@ -98,7 +98,11 @@
     <ion-button (click)="acao()">Botão</ion-button>
 
     <img src="{{ imagemRandom }}" alt="">
+      -->
 
+      <h1>Navegação</h1>
+      <ion-button (click)="abrirBotao()" routerDirection="forward" expand="full">Botão</ion-button>
+      <ion-button (click)="abrirLista()" expand="full">Lista</ion-button>
 
 </ion-content>
 
