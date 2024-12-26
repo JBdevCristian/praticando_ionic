@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,11 @@ import { NavController } from '@ionic/angular';
 })
 export class HomePage {
 
-    public titulo: String = 'Xmen'
-    public imagemRandom: String = 'https://picsum.photos/200/300'
+
+    public teste: String = ''
+    public resultado: String = ''
+    public titulo: String = 'Xmen' //DataBinding
+    public imagemRandom: String = 'https://picsum.photos/200/300' //DataBinding
 
     public atualizar(event: any): void {
       var valor = event.target.value;
@@ -21,7 +25,10 @@ export class HomePage {
 
     constructor(private navegacao: NavController) { }
 
-   
+    recuperar() {
+      this.resultado = this.teste
+    }
+
     abrirBotao() {
       this.navegacao.navigateForward('botoes')
     }

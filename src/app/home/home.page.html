@@ -100,6 +100,20 @@
     <img src="{{ imagemRandom }}" alt="">
       -->
 
+      <h1>Modelos</h1>
+      <ion-item>
+        <ion-input labelPlacement="floating" label="Digite alguma coisa" [(ngModel)]="teste"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" color="dark" (click)="recuperar()">Clicar</ion-button>
+      
+
+      <br>
+      {{ resultado }}<br>
+      
+
+      
+
       <h1>Navegação</h1>
       <ion-button (click)="abrirBotao()" routerDirection="forward" expand="full">Botão</ion-button>
       <ion-button (click)="abrirLista()" expand="full">Lista</ion-button>
